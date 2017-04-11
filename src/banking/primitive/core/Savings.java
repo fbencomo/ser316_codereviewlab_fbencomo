@@ -16,7 +16,7 @@ public class Savings extends Account {
 	 * A deposit comes with a fee of 50 cents per deposit
 	 */
 	public boolean deposit(float amount) {
-		if (getState() != State.CLOSED) {
+		if (getState() != State.CLOSED && amount > 0.0f) {
 			balance = balance + amount - 0.50F;
 			if (balance >= 0.0f) {
 				setState(State.OPEN);
@@ -44,7 +44,7 @@ public class Savings extends Account {
 		return false;
 	}
 	
-	public String getType() { return "Checking"; }
+	public String getType() { return "Savings"; }
 
 	public String toString() {
 		return "Savings: " + getName() + ": " + getBalance();
