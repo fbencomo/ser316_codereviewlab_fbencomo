@@ -106,7 +106,12 @@ class MainFrame extends JFrame {
 		
 		setSize(400, 250);
 	}
-
+	
+	/**
+	  Class:	DisplayHandler
+	  
+	  Description: Complete a handler for a new display.
+	*/
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;
